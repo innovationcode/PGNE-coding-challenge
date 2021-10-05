@@ -26,7 +26,7 @@
   3. Return the data when the capacity is less - COMPLETE
 
   4. Convert your JSON output into CSV. - COMPLETE
-  5. Write your output into a filesystem as a .csv file. - COMPLETE FOR LOCAL ENVIRONMENT
+  5. Write your output into a filesystem as a .csv file. - COMPLETE 
   6. Upload your file to S3. (overwrite or create a new file) - CREATING NEW FILE and uploading csv data
 
 ## To run at local environment
