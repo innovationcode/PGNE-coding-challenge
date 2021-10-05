@@ -43,8 +43,6 @@ resources:
       Properties:
         BucketName: ${self:service}-${self:provider.stage}--uploads
         
-
-      
 plugins:
   - serverless-offline
 

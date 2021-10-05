@@ -1,8 +1,10 @@
 const express = require("express");
+const app = express();
+
 const cors = require("cors");
 const fetch = require("cross-fetch");
 var fs = require("fs");
-const BUCKET_NAME = "pgne-coding-challenge-dev--uploads";
+const BUCKET_NAME = "pgne-coding-challenge1-dev--uploads";
 
 const local = false;
 const AWS = require("aws-sdk");
@@ -15,19 +17,23 @@ const s3 = new AWS.S3({
   secretAccessKey: SECRET,
 });
 
-const app = express();
-
 app.use(cors());
 app.use(express.json());
 
 app.get("/", async (req, res) => {
   // console.log("fetch-api get endpoint ***");
+
   const url = "https://gbfs.divvybikes.com/gbfs/en/station_information.json";
   const options = { method: "GET" };
+
   const response = await fetch(url, options)
     .then((response) => response.json())
     .catch((err) => console.log(err));
 
+  //Iterate and  Filtrer received data
+  //1. To delete rental_uris and rental_methos
+  //2. To rename ID's
+  //3. To return data which is less than capacity 12
   var newFilteredData = response.data.stations.filter((station) => {
     for (let key in station) {
       delete station["rental_uris"];
@@ -49,13 +55,11 @@ app.get("/", async (req, res) => {
         delete station["legacy_id"];
       }
     }
-
-    // console.log("*****************************  ", station["capacity"]);
+    // console.log("***  ", station["capacity"]);
     return station["capacity"] < 12;
   });
 
-  /// Save part
-
+  /// Save part and JSON to CSV
   var json = newFilteredData;
   var fields = Object.keys(json[0]);
   var replacer = function (key, value) {
@@ -71,20 +75,9 @@ app.get("/", async (req, res) => {
   csv.unshift(fields.join(",")); // add header column
   csv = csv.join("\r\n");
 
+  //Filename with timestamp .csv
   const filename = `Stations_Info_${Date.now()}.csv`;
-
-  const fileContent = csv;
-
-  const params = {
-    Bucket: BUCKET_NAME,
-    CreateBucketConfiguration: {
-      // Set your region here
-      LocationConstraint: "us-east-1",
-    },
-  };
-
   console.log("now uploading file ...  ", filename);
-
   const uploadFile = (fileName) => {
     // Setting up S3 upload parameters
     const params = {
@@ -98,13 +91,9 @@ app.get("/", async (req, res) => {
       if (err) {
         throw err;
       }
-      // console.log(
-      //   `File uploaded successfully. ${data.Location}   ${data.ID}  `
-      // );
     });
   };
   uploadFile(filename);
-
   res.status(200).json(newFilteredData);
 });
 

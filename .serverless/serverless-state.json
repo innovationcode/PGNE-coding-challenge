@@ -186,7 +186,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/pgne-coding-challenge1/dev/1633451069635-2021-10-05T16:24:29.635Z/pgne-coding-challenge1.zip"
+                "S3Key": "serverless/pgne-coding-challenge1/dev/1633477048583-2021-10-05T23:37:28.583Z/pgne-coding-challenge1.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs14.x",
@@ -204,14 +204,14 @@
               "AppDashapiLogGroup"
             ]
           },
-          "AppDashapiLambdaVersionYuw8seTJwPUchMq0kv8GoIk9JWzLsqFp9NJ0UdWOu8": {
+          "AppDashapiLambdaVersionqfz1ljKCCaWe0ScC8pKU2lli7VbhZUJIElSQ8PAQkw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppDashapiLambdaFunction"
               },
-              "CodeSha256": "wMuPXQ98RTNSsjjpR/JSmZ1DLHH1yE9GyeRYK3gF8/Q="
+              "CodeSha256": "zTDbAZAqORcWiSM8gk+jBOq3bvIxuWEvQA0iN/APSsk="
             }
           },
           "ApiGatewayRestApi": {
@@ -323,7 +323,7 @@
               "AppDashapiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1633451044140": {
+          "ApiGatewayDeployment1633477023030": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -392,7 +392,7 @@
           "AppDashapiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppDashapiLambdaVersionYuw8seTJwPUchMq0kv8GoIk9JWzLsqFp9NJ0UdWOu8"
+              "Ref": "AppDashapiLambdaVersionqfz1ljKCCaWe0ScC8pKU2lli7VbhZUJIElSQ8PAQkw"
             },
             "Export": {
               "Name": "sls-pgne-coding-challenge1-dev-AppDashapiLambdaFunctionQualifiedArn"
@@ -548,7 +548,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "AppDashapiLambdaVersionYuw8seTJwPUchMq0kv8GoIk9JWzLsqFp9NJ0UdWOu8"
+        "versionLogicalId": "AppDashapiLambdaVersionqfz1ljKCCaWe0ScC8pKU2lli7VbhZUJIElSQ8PAQkw"
       }
     },
     "resources": {
@@ -587,7 +587,7 @@
     "artifact": "C:\\Users\\dhake\\Desktop\\avenueCode\\PGNE-coding-challenge\\.serverless\\pgne-coding-challenge1.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/pgne-coding-challenge1/dev/1633451069635-2021-10-05T16:24:29.635Z",
+    "artifactDirectoryName": "serverless/pgne-coding-challenge1/dev/1633477048583-2021-10-05T23:37:28.583Z",
     "artifact": "pgne-coding-challenge1.zip"
   }
 }
