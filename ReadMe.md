@@ -26,7 +26,7 @@
   3. Return the data when the capacity is less - COMPLETE
 
   4. Convert your JSON output into CSV. - COMPLETE
-  5. Write your output into a filesystem as a .csv file. - COMPLETE 
+  5. Write your output into a filesystem as a .csv file. - COMPLETE
   6. Upload your file to S3. (overwrite or create a new file) - CREATING NEW FILE and uploading csv data
 
 ## To run at local environment
@@ -38,8 +38,8 @@
 4.  run `serverless offline start`
     - can check locally `http://localhost:3000/dev` the response will be filtered data with above specifications.
     - You can see here CSV file uploaded to s3 bucket.
-5.  Unit-test added using ```JEST and SUPERTEST``` for the API call.
-    - Run ```npm test``` for unit testing.
+5.  Unit-test added using `JEST and SUPERTEST` for the API call.
+    - Run `npm test` for unit testing.
 6.  Deployed endpoints-
     - https://cpdhnpbrtg.execute-api.us-east-1.amazonaws.com/dev/
     - s3 bucket CSV - Object URL
