@@ -38,7 +38,9 @@
 4.  run `serverless offline start`
     - can check locally `http://localhost:3000/dev` the response will be filtered data with above specifications.
     - You can see here CSV file uploaded to s3 bucket.
-5.  Deployed endpoints-
+5.  Unit-test added using ```JEST and SUPERTEST``` for the API call.
+    - Run ```npm test``` for unit testing.
+6.  Deployed endpoints-
     - https://cpdhnpbrtg.execute-api.us-east-1.amazonaws.com/dev/
     - s3 bucket CSV - Object URL
       - https://pgne-coding-challenge-dev--uploads.s3.amazonaws.com/Stations_Info_1633450199356.csv
