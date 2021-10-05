@@ -33,8 +33,8 @@
 
 1.  git clone this repository
 2.  `npm install` - to install all dependencies.
-3.  Need AWS-cli (can install )
-    - configure IAM here `aws configue` after aws-cli installation need access-id and secret-key.
+3.  Need AWS-cli [install](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+    - configure IAM `aws configue` after aws-cli installation need access-id and secret-key.
 4.  run `serverless offline start`
     - can check locally `http://localhost:3000/dev` the response will be filtered data with above specifications.
     - You can see here CSV file uploaded to s3 bucket.
