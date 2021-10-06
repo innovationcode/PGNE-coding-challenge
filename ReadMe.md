@@ -42,7 +42,6 @@
     - Run `npm test` for unit testing.
 6.  Deployed endpoints-
     - https://cpdhnpbrtg.execute-api.us-east-1.amazonaws.com/dev/
-    - s3 bucket CSV - Object URL
-      - 
-      - https://pgne-coding-challenge1-dev--uploads.s3.amazonaws.com/Stations_Info_1633480332308.csv
-      - 
+7.  s3 bucket CSV - Object URL
+    - https://pgne-coding-challenge1-dev--uploads.s3.amazonaws.com/Stations_Info_1633480332308.csv
+     
