@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/pgne-coding-challenge1/dev/1633477048583-2021-10-05T23:37:28.583Z/pgne-coding-challenge1.zip"
+          "S3Key": "serverless/pgne-coding-challenge1/dev/1633555247185-2021-10-06T21:20:47.185Z/pgne-coding-challenge1.zip"
         },
         "Handler": "handler.handler",
         "Runtime": "nodejs14.x",
@@ -186,14 +186,14 @@
         "AppDashapiLogGroup"
       ]
     },
-    "AppDashapiLambdaVersionqfz1ljKCCaWe0ScC8pKU2lli7VbhZUJIElSQ8PAQkw": {
+    "AppDashapiLambdaVersioncuJRzVPgJqoQH32BT2svyXt7px6SLjsJUIrpbQdlo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppDashapiLambdaFunction"
         },
-        "CodeSha256": "zTDbAZAqORcWiSM8gk+jBOq3bvIxuWEvQA0iN/APSsk="
+        "CodeSha256": "LRy5uwshyNE9baqacE4LSU9qh932IPdL4Npi23AN9i8="
       }
     },
     "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
         "AppDashapiLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1633477023030": {
+    "ApiGatewayDeployment1633555215356": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -374,7 +374,7 @@
     "AppDashapiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppDashapiLambdaVersionqfz1ljKCCaWe0ScC8pKU2lli7VbhZUJIElSQ8PAQkw"
+        "Ref": "AppDashapiLambdaVersioncuJRzVPgJqoQH32BT2svyXt7px6SLjsJUIrpbQdlo"
       },
       "Export": {
         "Name": "sls-pgne-coding-challenge1-dev-AppDashapiLambdaFunctionQualifiedArn"
